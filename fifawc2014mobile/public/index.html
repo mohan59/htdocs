@@ -1,0 +1,1389 @@
+<!doctype html>
+<html>
+	<head>
+	<title>2014 FIFA World Cup</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+		<link rel="stylesheet" href="css/app.css">
+		
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.js"></script>	
+		<script src="../../libs/jquery.json-2.4.js"></script>
+		<script src="js/jquery.jcarousel.min.js"></script>		
+		<script src="js/app.js" ></script>
+		<script src="js/countdown.js" ></script>
+		
+		<link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon"/>
+	</head>
+	<body>	
+		<!-- LIVE MATCH PAGE -->
+		<div id="live-page" data-role="page" data-url="live-page" class="app-bg">
+			<div data-role="header" data-theme="b" class="navbar-icon-style wc-text">
+				<h1>2014 FIFA World Cup</h1>
+				<div data-role="navbar" class="navbar-icon-style">
+					<ul>
+						<li><a href="#live-page" id="live" data-icon="custom" class="ui-btn-active">LIVE</a></li>						
+						<li><a href="#teams-page" id="squads" data-icon="custom">TEAMS</a></li>					
+						<li><a href="#matches-page" id="matches" data-icon="custom">SCHEDULE</a></li>	
+						<li><a href="#stats-page" id="stats" data-icon="custom">STATS</a></li>
+						<li><a href="#settings-page" id="settings" data-icon="custom">SETTINGS</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- /header -->
+			
+			<div data-role="content" class="live-page-content">
+			
+				<div class="match-update-container" >					
+					<table class="table-match-update">
+						<tbody>
+							<tr>
+								<th><a href="#"><img src="media/refresh.png"></img></a></th>
+								<th>0"</th>
+								<th><a href="#"><img src="media/cross.png"></img></a></th>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<div class="live-score-container">
+					<div><p class="live-score-match-number">Thu, June 12</p><p class="live-score-date-venue">S&#227;o Paulo</p></div>
+					<div><p class="live-score-match-type">GROUP A</p></div>
+					
+					
+					<table class="table-live-score"> 
+						<thead> 
+							<tr> 
+								<th scope="col"></th>  
+								<th scope="col"></th>
+								<th scope="col"></th>								
+							</tr> 
+						</thead> 
+						<tbody> 
+							<tr> 
+								<th><a href="#"><img src="media/flags-64/bra.png"></img></a></th>
+								<td></td>
+								<th><a href="#"><img src="media/flags-64/cro.png"></img></a></th> 
+							</tr> 
+							<tr> 
+								<th><a href="#">BRAZIL</a></th>
+								<td></td>
+								<th><a href="#">CROATIA</a></th> 
+							</tr>
+							<tr> 
+								<th class="live-score-goal">0 [0]</th>
+								<td></td>
+								<th class="live-score-goal">0 [0]</th> 
+							</tr>
+						</tbody> 
+					</table>
+				</div>
+				
+				<br/>
+				
+				<div class="live-score-container">
+					<div><p class="live-score-match-number">Fri, June 13</p><p class="live-score-date-venue">Rio de Janeiro</p></div>
+					<div><p class="live-score-match-type">GROUP A</p></div>
+					
+					<table class="table-live-score"> 
+						<thead> 
+							<tr> 
+								<th scope="col"></th>  
+								<th scope="col"></th>
+								<th scope="col"></th>								
+							</tr> 
+						</thead> 
+						<tbody> 
+							<tr> 
+								<th><a href="#"><img src="media/flags-64/mex.png"></img></a></th>
+								<td></td>
+								<th><a href="#"><img src="media/flags-64/cmr.png"></img></a></th> 
+							</tr> 
+							<tr> 
+								<th><a href="#">MEXICO</a></th>
+								<td></td>
+								<th><a href="#">CAMEROON</a></th> 
+							</tr>
+							<tr> 
+								<th class="live-score-goal">0 [0]</th>
+								<td></td>
+								<th class="live-score-goal">0 [0]</th> 
+							</tr>
+						</tbody> 
+					</table>
+				</div>
+				
+				
+												
+				<!-- <div>					
+					<table id="tableCountdown" class="table-countdown">						
+						<tbody>
+							<tr>
+								<th><p id="countdown-timer-days" class="countdown-digit"></p></th>
+								<td>:</td>
+								<th><p id="countdown-timer-hours" class="countdown-digit"></p></th>
+								<td>:</td>
+								<th><p id="countdown-timer-minutes" class="countdown-digit"></p></th>
+								<td>:</td>
+								<th><p id="countdown-timer-seconds" class="countdown-digit"></p></th>
+							</tr>
+							<tr>
+								<th>days</th>
+								<td></td>
+								<th>hours</th>
+								<td></td>
+								<th>minutes</th>
+								<td></td>
+								<th>seconds</th>
+							</tr>
+						</tbody>
+					</table>
+				</div> -->
+				
+				
+			</div>
+			<!-- /content -->		
+
+			<!-- <div data-role="footer">
+				<h4>My Footer</h4>
+			</div> -->
+			<!-- /footer -->
+
+		</div>
+		<!-- /LIVE MATCH PAGE -->
+		
+		<!-- TEAMS PAGE -->
+		<div id="teams-page" data-role="page" data-url="teams-page" class="app-bg">
+			<div data-role="header" data-theme="b" style="overflow:hidden;" class="navbar-icon-style wc-text">
+				<h1>2014 FIFA World Cup</h1>
+				<div data-role="navbar" class="navbar-icon-style">
+					<ul>
+						<li><a href="#live-page" id="live" data-icon="custom">LIVE</a></li>						
+						<li><a href="#teams-page" id="squads" data-icon="custom" class="ui-btn-active">TEAMS</a></li>	
+						<li><a href="#matches-page" id="matches" data-icon="custom">SCHEDULE</a></li>	
+						<li><a href="#stats-page" id="stats" data-icon="custom">STATS</a></li>
+						<li><a href="#settings-page" id="settings" data-icon="custom">SETTINGS</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- /header -->
+			
+			<div data-role="content" class="collapsible-content">
+				<div data-role="collapsible-set" data-inset="false" data-theme="e" data-content-theme="d" >
+					<div data-role="collapsible" data-iconPos="right">
+						<!-- <a href="#"><img src="media/flags-24/alg.png" alt="Algeria" class="ui-li-icon">Algeria (ALG)</a> -->
+						<h3 class="ui-icon-arrow-d">Algeria (ALG)</h3>
+					</div>
+				</div>
+			
+				<!-- <ul data-role="listview">
+					<li><a href="#"><img src="media/flags-2	4/alg.png" alt="Algeria" class="ui-li-icon">Algeria (ALG)</a></li>					
+					<li><a href="#"><img src="media/flags-24/arg.png" alt="Argentina" class="ui-li-icon">Argentina (ARG)</a></li>
+					<li><a href="#"><img src="media/flags-24/aus.png" alt="Australia" class="ui-li-icon">Australia (AUS)</a></li>		
+					<li><a href="#"><img src="media/flags-24/bel.png" alt="Belgium" class="ui-li-icon">Belgium (BEL)</a></li>
+					<li><a href="#"><img src="media/flags-24/bih.png" alt="Bosnia-Herzegovina" class="ui-li-icon">Bosnia-Herzegovina (BIH)</a></li>
+					<li><a href="#"><img src="media/flags-24/bra.png" alt="Brazil" class="ui-li-icon">Brazil (BRA)</a></li>
+					<li><a href="#"><img src="media/flags-24/cmr.png" alt="Cameroon" class="ui-li-icon">Cameroon (CMR)</a></li>
+					<li><a href="#"><img src="media/flags-24/chi.png" alt="Chile" class="ui-li-icon">Chile (CHI)</a></li>
+					<li><a href="#"><img src="media/flags-24/col.png" alt="Colombia" class="ui-li-icon">Colombia (COL)</a></li>
+					<li><a href="#"><img src="media/flags-24/crc.png" alt="Costa Rica" class="ui-li-icon">Costa Rica (CRC)</a></li>
+					<li><a href="#"><img src="media/flags-24/civ.png" alt="Cote d'Ivoire" class="ui-li-icon">Cote d'Ivoire (CIV)</a></li>
+					<li><a href="#"><img src="media/flags-24/cro.png" alt="Croatia" class="ui-li-icon">Croatia (CRO)</a></li>
+					<li><a href="#"><img src="media/flags-24/ecu.png" alt="Ecuador" class="ui-li-icon">Ecuador (ECU)</a></li>
+					<li><a href="#"><img src="media/flags-24/eng.png" alt="England" class="ui-li-icon">England (ENG)</a></li>
+					<li><a href="#"><img src="media/flags-24/fra.png" alt="France" class="ui-li-icon">France (FRA)</a></li>
+					<li><a href="#"><img src="media/flags-24/ger.png" alt="Germany" class="ui-li-icon">Germany (GER)</a></li>
+					<li><a href="#"><img src="media/flags-24/gha.png" alt="Ghana" class="ui-li-icon">Ghana (GHA)</a></li>
+					<li><a href="#"><img src="media/flags-24/gre.png" alt="Greece" class="ui-li-icon">Greece (GRE)</a></li>
+					<li><a href="#"><img src="media/flags-24/hon.png" alt="Honduras" class="ui-li-icon">Honduras (HON)</a></li>
+					<li><a href="#"><img src="media/flags-24/irn.png" alt="Iran" class="ui-li-icon">Iran (IRN)</a></li>
+					<li><a href="#"><img src="media/flags-24/ita.png" alt="Italy" class="ui-li-icon">Italy (ITA)</a></li>
+					<li><a href="#"><img src="media/flags-24/jpn.png" alt="Japan" class="ui-li-icon">Japan (JPN)</a></li>
+					<li><a href="#"><img src="media/flags-24/kor.png" alt="Korea Republic" class="ui-li-icon">Korea Republic (KOR)</a></li>		
+					<li><a href="#"><img src="media/flags-24/mex.png" alt="Mexico" class="ui-li-icon">Mexico (MEX)</a></li>
+					<li><a href="#"><img src="media/flags-24/nga.png" alt="Nigeria" class="ui-li-icon">Nigeria (NGA)</a></li>		
+					<li><a href="#"><img src="media/flags-24/ned.png" alt="Netherlands" class="ui-li-icon">Netherlands (NED)</a></li>
+					<li><a href="#"><img src="media/flags-24/por.png" alt="Portugal" class="ui-li-icon">Portugal (POR)</a></li>
+					<li><a href="#"><img src="media/flags-24/rus.png" alt="Russia" class="ui-li-icon">Russia (RUS)</a></li>					
+					<li><a href="#"><img src="media/flags-24/esp.png" alt="Spain" class="ui-li-icon">Spain (ESP)</a></li>
+					<li><a href="#"><img src="media/flags-24/sui.png" alt="Switzerland" class="ui-li-icon">Switzerland (SUI)</a></li>
+					<li><a href="#"><img src="media/flags-24/usa.png" alt="United States" class="ui-li-icon">United States (USA)</a></li>				
+					<li><a href="#"><img src="media/flags-24/uru.png" alt="Uruguay" class="ui-li-icon">Uruguay (URU)</a></li>
+				</ul> -->
+			</div>
+			<!-- /content -->		
+		</div>
+		<!-- /TEAMS PAGE -->
+		
+		<!-- SCHEDULE PAGE -->
+		<div id="matches-page" data-role="page" data-url="matches-page" class="app-bg">
+			<div data-role="header" data-theme="b" style="overflow:hidden;" class="navbar-icon-style wc-text">
+				<h1>2014 FIFA World Cup</h1>
+				<div data-role="navbar" class="navbar-icon-style">
+					<ul>
+						<li><a href="#live-page" id="live" data-icon="custom">LIVE</a></li>						
+						<li><a href="#teams-page" id="squads" data-icon="custom">TEAMS</a></li>						
+						<li><a href="#matches-page" id="matches" data-icon="custom" class="ui-btn-active">SCHEDULE</a></li>
+						<li><a href="#stats-page" id="stats" data-icon="custom">STATS</a></li>
+						<li><a href="#settings-page" id="settings" data-icon="custom">SETTINGS</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- /header -->
+			
+			<div data-role="content" class="collapsible-content">
+				<div data-role="collapsible-set" data-inset="false" data-theme="e" data-content-theme="d" >
+					<div data-role="collapsible">
+						<h3>GROUP STAGE</h3>
+						<table id="groupStageTable" class="table-games"> 							 
+							<tbody> 
+								<tr> 
+									<th>Jun 12, 5:00p</th> 
+									<td><img src="media/flags-16/bra.png" alt="Brazil"></img>&#32;<a href="#">BRA</a></td>
+									<th>0-0</th>
+									<td><a href="#">CRO</a>&#32;<img src="media/flags-16/cro.png" alt="Croatia"></img></td> 
+									<th>S&#227;o Paulo</th> 
+								</tr> 
+								<tr> 
+									<th scope="row">Jun 13, 1:00p</th> 
+									<td><img src="media/flags-16/mex.png" alt="Mexico"></img>&#32;<a href="#">MEX</a></td>
+									<th>0-0</th>
+									<td><a href="#">CMR</a>&#32;<img src="media/flags-16/cmr.png" alt="Cameroon"></img></td> 
+									<th>Rio de Janeiro</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 13, 4:00p</th> 
+									<td><img src="media/flags-16/esp.png" alt="Spain"></img>&#32;<a href="#">ESP</a></td>
+									<th>0-0</th>
+									<td><a href="#">NED</a>&#32;<img src="media/flags-16/ned.png" alt="Netherlands"></img></td> 
+									<th>Salvador</th> 
+								</tr>		
+								<tr> 
+									<th scope="row">Jun 13, 7:00p</th> 
+									<td><img src="media/flags-16/chi.png" alt="Chile"></img>&#32;<a href="#">CHI</a></td>
+									<th>0-0</th>
+									<td><a href="#">AUS</a>&#32;<img src="media/flags-16/aus.png" alt="Australia"></img></td> 
+									<th>Cuiab&#225;</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 14, 1:00p</th> 
+									<td><img src="media/flags-16/col.png" alt="Colombia"></img>&#32;<a href="#">COL</a></td>
+									<th>0-0</th>
+									<td><a href="#">GRE</a>&#32;<img src="media/flags-16/gre.png" alt="Greece"></img></td> 
+									<th>Belo Horizonte</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 14, 10:00p</th> 
+									<td><img src="media/flags-16/civ.png" alt="Cote d'Ivoire"></img>&#32;<a href="#">CIV</a></td>
+									<th>0-0</th>
+									<td><a href="#">JPN</a>&#32;<img src="media/flags-16/jpn.png" alt="Japan"></img></td> 
+									<th>Recife</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 14, 4:00p</th> 
+									<td><img src="media/flags-16/uru.png" alt="Uruguay"></img>&#32;<a href="#">URU</a></td>
+									<th>0-0</th>
+									<td><a href="#">CRC</a>&#32;<img src="media/flags-16/crc.png" alt="Costa Rica"></img></td> 
+									<th>Fortaleza</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 14, 7:00p</th> 
+									<td><img src="media/flags-16/eng.png" alt="England"></img>&#32;<a href="#">ENG</a></td>
+									<th>0-0</th>
+									<td><a href="#">ITA</a>&#32;<img src="media/flags-16/ita.png" alt="England"></img></td> 
+									<th>Manaus</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 15, 1:00p</th> 
+									<td><img src="media/flags-16/sui.png" alt="Switzerland"></img>&#32;<a href="#">SUI</a></td>
+									<th>0-0</th>
+									<td><a href="#">ECU</a>&#32;<img src="media/flags-16/ecu.png" alt="Ecuador"></img></td> 
+									<th>Bras&#237;lia</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 15, 4:00p</th> 
+									<td><img src="media/flags-16/fra.png" alt="France"></img>&#32;<a href="#">FRA</a></td>
+									<th>0-0</th>
+									<td><a href="#">HON</a>&#32;<img src="media/flags-16/hon.png" alt="Honduras"></img></td> 
+									<th>Porto Alegre</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 15, 7:00p</th> 
+									<td><img src="media/flags-16/arg.png" alt="Argentina"></img>&#32;<a href="#">ARG</a></td>
+									<th>0-0</th>
+									<td><a href="#">BIH</a>&#32;<img src="media/flags-16/bih.png" alt="Bosnia-Herzegovina"></img></td> 
+									<th>Rio de Janeiro</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 16, 4:00p</th> 
+									<td><img src="media/flags-16/irn.png" alt="Iran"></img>&#32;<a href="#">IRN</a></td>
+									<th>0-0</th>
+									<td><a href="#">NGA</a>&#32;<img src="media/flags-16/nga.png" alt="Nigeria"></img></td> 
+									<th>Curitiba</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 16, 1:00p</th> 
+									<td><img src="media/flags-16/ger.png" alt="Germany"></img>&#32;<a href="#">GER</a></td>
+									<th>0-0</th>
+									<td><a href="#">POR</a>&#32;<img src="media/flags-16/por.png" alt="Portugal"></img></td> 
+									<th>Salvador</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 16, 7:00p</th> 
+									<td><img src="media/flags-16/gha.png" alt="Ghana"></img>&#32;<a href="#">GHA</a></td>
+									<th>0-0</th>
+									<td><a href="#">USA</a>&#32;<img src="media/flags-16/usa.png" alt="United States"></img></td> 
+									<th>Natal</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 17, 1:00p</th> 
+									<td><img src="media/flags-16/bel.png" alt="Belgium"></img>&#32;<a href="#">BEL</a></td>
+									<th>0-0</th>
+									<td><a href="#">ALG</a>&#32;<img src="media/flags-16/alg.png" alt="Algeria"></img></td> 
+									<th>Belo Horizonte</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 17, 7:00p</th> 
+									<td><img src="media/flags-16/rus.png" alt="Russia"></img>&#32;<a href="#">RUS</a></td>
+									<th>0-0</th>
+									<td><a href="#">KOR</a>&#32;<img src="media/flags-16/kor.png" alt="Korea Republic"></img></td> 
+									<th>Cuiab&#225;</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 17, 4:00p</th> 
+									<td><img src="media/flags-16/bra.png" alt="Brazil"></img>&#32;<a href="#">BRA</a></td>
+									<th>0-0</th>
+									<td><a href="#">MEX</a>&#32;<img src="media/flags-16/mex.png" alt="Mexico"></img></td> 
+									<th>Fortaleza</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 18, 7:00p</th> 
+									<td><img src="media/flags-16/cmr.png" alt="Cameroon"></img>&#32;<a href="#">CMR</a></td>
+									<th>0-0</th>
+									<td><a href="#">CRO</a>&#32;<img src="media/flags-16/cro.png" alt="Croatia"></img></td> 
+									<th>Manaus</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 18, 1:00p</th> 
+									<td><img src="media/flags-16/aus.png" alt="Australia"></img>&#32;<a href="#">AUS</a></td>
+									<th>0-0</th>
+									<td><a href="#">NED</a>&#32;<img src="media/flags-16/ned.png" alt="Netherlands"></img></td> 
+									<th>Porto Alegre</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 18, 4:00p</th> 
+									<td><img src="media/flags-16/esp.png" alt="Spain"></img>&#32;<a href="#">ESP</a></td>
+									<th>0-0</th>
+									<td><a href="#">CHI</a>&#32;<img src="media/flags-16/chi.png" alt="Chile"></img></td> 
+									<th>Rio de Janeiro</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 19, 1:00p</th> 
+									<td><img src="media/flags-16/col.png" alt="Colombia"></img>&#32;<a href="#">COL</a></td>
+									<th>0-0</th>
+									<td><a href="#">CIV</a>&#32;<img src="media/flags-16/civ.png" alt="Cote d'Ivoire"></img></td> 
+									<th>Bras&#237;lia</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 19, 7:00p</th> 
+									<td><img src="media/flags-16/jpn.png" alt="Japan"></img>&#32;<a href="#">JPN</a></td>
+									<th>0-0</th>
+									<td><a href="#">GRE</a>&#32;<img src="media/flags-16/gre.png" alt="Greece"></img></td> 
+									<th>Natal</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 19, 4:00p</th> 
+									<td><img src="media/flags-16/uru.png" alt="Uruguay"></img>&#32;<a href="#">URU</a></td>
+									<th>0-0</th>
+									<td><a href="#">ENG</a>&#32;<img src="media/flags-16/eng.png" alt="England"></img></td> 
+									<th>S&#227;o Paulo</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 20, 1:00p</th> 
+									<td><img src="media/flags-16/ita.png" alt="Italy"></img>&#32;<a href="#">ITA</a></td>
+									<th>0-0</th>
+									<td><a href="#">CRC</a>&#32;<img src="media/flags-16/crc.png" alt="Costa Rica"></img></td> 
+									<th>Recife</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 20, 4:00p</th> 
+									<td><img src="media/flags-16/sui.png" alt="Switzerland"></img>&#32;<a href="#">SUI</a></td>
+									<th>0-0</th>
+									<td><a href="#">FRA</a>&#32;<img src="media/flags-16/fra.png" alt="France"></img></td> 
+									<th>Salvador</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 20, 7:00p</th> 
+									<td><img src="media/flags-16/hon.png" alt="Honduras"></img>&#32;<a href="#">HON</a></td>
+									<th>0-0</th>
+									<td><a href="#">ECU</a>&#32;<img src="media/flags-16/ecu.png" alt="Ecuador"></img></td> 
+									<th>Curitiba</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 21, 1:00p</th> 
+									<td><img src="media/flags-16/arg.png" alt="Argentina"></img>&#32;<a href="#">ARG</a></td>
+									<th>0-0</th>
+									<td><a href="#">IRN</a>&#32;<img src="media/flags-16/irn.png" alt="Iran"></img></td> 
+									<th>Belo Horizonte</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 21, 7:00p</th> 
+									<td><img src="media/flags-16/nga.png" alt="Nigeria"></img>&#32;<a href="#">NGA</a></td>
+									<th>0-0</th>
+									<td><a href="#">BIH</a>&#32;<img src="media/flags-16/bih.png" alt="Bosnia-Herzegovina"></img></td> 
+									<th>Cuiab&#225;</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 21, 4:00p</th> 
+									<td><img src="media/flags-16/ger.png" alt="Germany"></img>&#32;<a href="#">GER</a></td>
+									<th>0-0</th>
+									<td><a href="#">GHA</a>&#32;<img src="media/flags-16/gha.png" alt="Ghana"></img></td> 
+									<th>Fortaleza</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 22, 7:00p</th> 
+									<td><img src="media/flags-16/usa.png" alt="United States"></img>&#32;<a href="#">USA</a></td>
+									<th>0-0</th>
+									<td><a href="#">POR</a>&#32;<img src="media/flags-16/por.png" alt="Portugal"></img></td> 
+									<th>Manaus</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 22, 1:00p</th> 
+									<td><img src="media/flags-16/bel.png" alt="Belgium"></img>&#32;<a href="#">BEL</a></td>
+									<th>0-0</th>
+									<td><a href="#">RUS</a>&#32;<img src="media/flags-16/rus.png" alt="Russia"></img></td> 
+									<th>Rio de Janeiro</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 22, 4:00p</th> 
+									<td><img src="media/flags-16/kor.png" alt="Korea Republic"></img>&#32;<a href="#">KOR</a></td>
+									<th>0-0</th>
+									<td><a href="#">ALG</a>&#32;<img src="media/flags-16/alg.png" alt="Algeria"></img></td> 
+									<th>Porto Alegre</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 23, 5:00p</th> 
+									<td><img src="media/flags-16/cmr.png" alt="Cameroon"></img>&#32;<a href="#">CMR</a></td>
+									<th>0-0</th>
+									<td><a href="#">BRA</a>&#32;<img src="media/flags-16/bra.png" alt="Brazil"></img></td> 
+									<th>Bras&#237;lia</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 23, 5:00p</th> 
+									<td><img src="media/flags-16/cro.png" alt="Croatia"></img>&#32;<a href="#">CRO</a></td>
+									<th>0-0</th>
+									<td><a href="#">MEX</a>&#32;<img src="media/flags-16/mex.png" alt="Mexico"></img></td> 
+									<th>Recife</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 23, 1:00p</th> 
+									<td><img src="media/flags-16/aus.png" alt="Australia"></img>&#32;<a href="#">AUS</a></td>
+									<th>0-0</th>
+									<td><a href="#">ESP</a>&#32;<img src="media/flags-16/esp.png" alt="Spain"></img></td> 
+									<th>Curitiba</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 23, 1:00p</th> 
+									<td><img src="media/flags-16/ned.png" alt="Netherlands"></img>&#32;<a href="#">NED</a></td>
+									<th>0-0</th>
+									<td><a href="#">CHI</a>&#32;<img src="media/flags-16/chi.png" alt="Chile"></img></td> 
+									<th>S&#227;o Paulo</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 24, 5:00p</th> 
+									<td><img src="media/flags-16/jpn.png" alt="Japan"></img>&#32;<a href="#">JPN</a></td>
+									<th>0-0</th>
+									<td><a href="#">COL</a>&#32;<img src="media/flags-16/col.png" alt="Colombia"></img></td> 
+									<th>Cuiab&#225;</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 24, 5:00p</th> 
+									<td><img src="media/flags-16/gre.png" alt="Greece"></img>&#32;<a href="#">GRE</a></td>
+									<th>0-0</th>
+									<td><a href="#">CIV</a>&#32;<img src="media/flags-16/civ.png" alt="Cote d'Ivoire"></img></td> 
+									<th>Fortaleza</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 24, 1:00p</th> 
+									<td><img src="media/flags-16/ita.png" alt="Italy"></img>&#32;<a href="#">ITA</a></td>
+									<th>0-0</th>
+									<td><a href="#">URU</a>&#32;<img src="media/flags-16/uru.png" alt="Uruguay"></img></td> 
+									<th>Natal</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 24, 1:00p</th> 
+									<td><img src="media/flags-16/crc.png" alt="Costa Rica"></img>&#32;<a href="#">CRC</a></td>
+									<th>0-0</th>
+									<td><a href="#">ENG</a>&#32;<img src="media/flags-16/eng.png" alt="England"></img></td> 
+									<th>Belo Horizonte</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 25, 5:00p</th> 
+									<td><img src="media/flags-16/hon.png" alt="Honduras"></img>&#32;<a href="#">HON</a></td>
+									<th>0-0</th>
+									<td><a href="#">SUI</a>&#32;<img src="media/flags-16/sui.png" alt="Switzerland"></img></td> 
+									<th>Manaus</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 25, 5:00p</th> 
+									<td><img src="media/flags-16/ecu.png" alt="Ecuador"></img>&#32;<a href="#">ECU</a></td>
+									<th>0-0</th>
+									<td><a href="#">FRA</a>&#32;<img src="media/flags-16/fra.png" alt="France"></img></td> 
+									<th>Rio de Janeiro</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 25, 1:00p</th> 
+									<td><img src="media/flags-16/nga.png" alt="Nigeria"></img>&#32;<a href="#">NGA</a></td>
+									<th>0-0</th>
+									<td><a href="#">ARG</a>&#32;<img src="media/flags-16/arg.png" alt="Argentina"></img></td> 
+									<th>Porto Alegre</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 25, 1:00p</th> 
+									<td><img src="media/flags-16/bih.png" alt="Bosnia-Herzegovina"></img>&#32;<a href="#">BIH</a></td>
+									<th>0-0</th>
+									<td><a href="#">IRN</a>&#32;<img src="media/flags-16/irn.png" alt="Iran"></img></td> 
+									<th>Salvador</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 26, 1:00p</th> 
+									<td><img src="media/flags-16/usa.png" alt="United States"></img>&#32;<a href="#">USA</a></td>
+									<th>0-0</th>
+									<td><a href="#">GER</a>&#32;<img src="media/flags-16/ger.png" alt="Germany"></img></td> 
+									<th>Recife</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 26, 1:00p</th> 
+									<td><img src="media/flags-16/por.png" alt="Portugal"></img>&#32;<a href="#">POR</a></td>
+									<th>0-0</th>
+									<td><a href="#">GHA</a>&#32;<img src="media/flags-16/gha.png" alt="Ghana"></img></td> 
+									<th>Bras&#237;lia</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 26, 5:00p</th> 
+									<td><img src="media/flags-16/kor.png" alt="Korea Republic"></img>&#32;<a href="#">KOR</a></td>
+									<th>0-0</th>
+									<td><a href="#">BEL</a>&#32;<img src="media/flags-16/bel.png" alt="Belgium"></img></td> 
+									<th>S&#227;o Paulo</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 26, 5:00p</th> 
+									<td><img src="media/flags-16/alg.png" alt="Algeria"></img>&#32;<a href="#">ALG</a></td>
+									<th>0-0</th>
+									<td><a href="#">RUS</a>&#32;<img src="media/flags-16/rus.png" alt="Russia"></img></td> 
+									<th>Curitiba</th> 
+								</tr>
+							</tbody> 
+						</table>								
+					</div>
+					<div data-role="collapsible">
+						<h3>ROUND OF 16</h3>
+						<table id="roundof16Table" class="table-games"> 
+							<tbody> 
+								<tr> 
+									<th scope="row">Jun 28, 1:00p</th> 
+									<td>A1</td>
+									<th>0-0</th>
+									<td>B2</td> 
+									<th>Belo Horizonte</th> 
+								</tr> 
+								<tr> 
+									<th scope="row">Jun 28, 4:00p</th> 
+									<td>C1</td>
+									<th>0-0</th>
+									<td>D2</td> 
+									<th>Rio de Janeiro</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 29, 1:00p</th> 
+									<td>B1</td>
+									<th>0-0</th>
+									<td>A2</td> 
+									<th>Fortaleza</th> 
+								</tr> 
+								<tr> 
+									<th scope="row">Jun 29, 5:00p</th> 
+									<td>D1</td>
+									<th>0-0</th>
+									<td>C2</td> 
+									<th>Recife</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jun 30, 1:00p</th> 
+									<td>E1</td>
+									<th>0-0</th>
+									<td>F2</td> 
+									<th>Bras&#237;lia</th> 
+								</tr> 
+								<tr> 
+									<th scope="row">Jun 30, 5:00p</th> 
+									<td>G1</td>
+									<th>0-0</th>
+									<td>H2</td> 
+									<th>Porto Alegre</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jul 1, 1:00p</th> 
+									<td>F1</td>
+									<th>0-0</th>
+									<td>E2</td> 
+									<th>S&#227;o Paulo</th> 
+								</tr> 
+								<tr> 
+									<th scope="row">Jul 1, 5:00p</th> 
+									<td>H1</td>
+									<th>0-0</th>
+									<td>G2</td> 
+									<th>Salvador</th> 
+								</tr>
+							</tbody> 
+						</table>
+					</div>
+					<div data-role="collapsible">
+						<h3>QUARTER FINALS</h3>
+						<table id="quarterFinalsTable" class="table-games"> 
+							<tbody> 
+								<tr> 
+									<th scope="row">Jul 4, 5:00p</th> 
+									<td>Winner R16 1</td>
+									<th>0-0</th>
+									<td>Winner R16 2</td> 
+									<th>Fortaleza</th> 
+								</tr> 
+								<tr> 
+									<th scope="row">Jul 4, 1:00p</th> 
+									<td>Winner R16 5</td>
+									<th>0-0</th>
+									<td>Winner R16 6</td> 
+									<th>Rio de Janeiro</th> 
+								</tr>
+								<tr> 
+									<th scope="row">Jul 5, 5:00p</th> 
+									<td>Winner R16 3</td>
+									<th>0-0</th>
+									<td>Winner R16 4</td> 
+									<th>Salvador</th> 
+								</tr> 
+								<tr> 
+									<th scope="row">Jul 5, 1:00p</th> 
+									<td>Winner R16 7</td>
+									<th>0-0</th>
+									<td>Winner R16 8</td> 
+									<th>Bras&#237;lia</th> 
+								</tr>
+							</tbody> 
+						</table>
+					</div>
+					<div data-role="collapsible">
+						<h3>SEMI FINALS</h3>
+						<table id="semiFinalsTable" class="table-games"> 
+							<tbody> 
+								<tr> 
+									<th scope="row">Jul 8, 5:00p</th> 
+									<td>Winner QF 1</td>
+									<th>0-0</th>
+									<td>Winner QF 2</td> 
+									<th>Belo Horizonte</th> 
+								</tr> 
+								<tr> 
+									<th scope="row">Jul 9, 5:00p</th> 
+									<td>Winner QF 3</td>
+									<th>0-0</th>
+									<td>Winner QF 4</td> 
+									<th>S&#227;o Paulo</th> 
+								</tr>
+							</tbody> 
+						</table>
+					</div>
+					<div data-role="collapsible">
+						<h3>THIRD PLACE PLAYOFF</h3>
+						<table id="thirdPlaceTable" class="table-games"> 
+							<tbody> 
+								<tr> 
+									<th scope="row">Jul 12, 5:00p</th> 
+									<td>Loser SF 1</td>
+									<th>0-0</th>
+									<td>Loser SF 2</td> 
+									<th>Bras&#237;lia</th> 
+								</tr> 
+							</tbody> 
+						</table>
+					</div>
+					<div data-role="collapsible">
+						<h3>FINAL</h3>
+						<table id="finalTable" class="table-games"> 
+							<tbody> 
+								<tr> 
+									<th scope="row">Jul 13, 4:00p</th> 
+									<td>Winner SF 1</td>
+									<th>0-0</th>
+									<td>Winner SF 2</td> 
+									<th>Rio de Janeiro</th> 
+								</tr> 
+							</tbody> 
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- /content -->	
+			
+		</div>
+		<!-- /SCHEDULE PAGE -->
+				
+		<!-- STATS PAGE -->
+		<div id="stats-page" data-role="page" data-url="stats-page" class="app-bg">
+			<div data-role="header" data-theme="b" style="overflow:hidden;" class="navbar-icon-style wc-text">
+				<h1>2014 FIFA World Cup</h1>
+				<div data-role="navbar" class="navbar-icon-style">
+					<ul>
+						<li><a href="#live-page" id="live" data-icon="custom">LIVE</a></li>						
+						<li><a href="#teams-page" id="squads" data-icon="custom">TEAMS</a></li>
+						<li><a href="#matches-page" id="matches" data-icon="custom">SCHEDULE</a></li>
+						<li><a href="#stats-page" id="stats" data-icon="custom" class="ui-btn-active">STATS</a></li>
+						<li><a href="#settings-page" id="settings" data-icon="custom">SETTINGS</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- /header -->
+			
+			<div data-role="content" class="collapsible-content">	
+				<div data-role="collapsible-set" data-inset="false" id="stats-content" data-theme="e" data-content-theme="c" >
+					<div data-role="collapsible">
+						<h1>TEAM</h1>											
+						<div data-role="collapsible-set" data-inset="false" id="groupStandings" class="collapsible-content-sub">
+							<div data-role="collapsible">
+								<h1>Standings</h1>								
+								<div class="jcarousel-wrapper">
+									<div class="jcarousel">
+										<ul id="tableGroupList">
+											<li>
+												<table id="groupATable" > 
+													<thead> 
+														<tr> 
+															<th scope="col">Group A</th>  
+															<th scope="col">G</th>  
+															<th scope="col">W</th>
+															<th scope="col">D</th>  
+															<th scope="col">L</th>		
+															<th scope="col">P</th>  									
+														</tr> 
+													</thead> 
+													<tbody> 
+														<tr> 
+															<th><img src="media/flags-16/bra.png" alt="Brazil"></img>&#32;<a href="#">BRA</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/cro.png" alt="Croatia"></img>&#32;<a href="#">CRO</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/mex.png" alt="Mexico"></img>&#32;<a href="#">MEX</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/cmr.png" alt="Cameroon"></img>&#32;<a href="#">CMR</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>		
+													</tbody> 
+												</table>
+											</li>
+											<li>
+												<table id="groupBTable" > 
+													<thead> 
+														<tr> 
+															<th scope="col">Group B</th>  
+															<th scope="col">G</th>  
+															<th scope="col">W</th>
+															<th scope="col">D</th>  
+															<th scope="col">L</th>		
+															<th scope="col">P</th>  									
+														</tr> 
+													</thead> 
+													<tbody> 
+														<tr> 
+															<th><img src="media/flags-16/esp.png" alt="Spain"></img>&#32;<a href="#">ESP</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/ned.png" alt="Netherlands"></img>&#32;<a href="#">NED</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/chi.png" alt="Chile"></img>&#32;<a href="#">CHI</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/aus.png" alt="Australia"></img>&#32;<a href="#">AUS</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>		
+													</tbody> 
+												</table>
+											</li>
+											<li>
+												<table id="groupCTable" > 
+													<thead> 
+														<tr> 
+															<th scope="col">Group C</th>  
+															<th scope="col">G</th>  
+															<th scope="col">W</th>
+															<th scope="col">D</th>  
+															<th scope="col">L</th>		
+															<th scope="col">P</th>  									
+														</tr> 
+													</thead> 
+													<tbody> 
+														<tr> 
+															<th><img src="media/flags-16/col.png" alt="Colombia"></img>&#32;<a href="#">COL</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/gre.png" alt="Greece"></img>&#32;<a href="#">GRE</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/civ.png" alt="Cote d'Ivoire"></img>&#32;<a href="#">CIV</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/jpn.png" alt="Japan"></img>&#32;<a href="#">JPN</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>		
+													</tbody> 
+												</table>
+											</li>
+											<li>
+												<table id="groupDTable" > 
+													<thead> 
+														<tr> 
+															<th scope="col">Group D</th>  
+															<th scope="col">G</th>  
+															<th scope="col">W</th>
+															<th scope="col">D</th>  
+															<th scope="col">L</th>		
+															<th scope="col">P</th>  									
+														</tr> 
+													</thead> 
+													<tbody> 
+														<tr> 
+															<th><img src="media/flags-16/uru.png" alt="Uruguay"></img>&#32;<a href="#">URU</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/crc.png" alt="Costa Rica"></img>&#32;<a href="#">CRC</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/eng.png" alt="England"></img>&#32;<a href="#">ENG</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/ita.png" alt="Italy"></img>&#32;<a href="#">ITA</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>		
+													</tbody> 
+												</table>
+											</li>
+											<li>
+												<table id="groupETable" > 
+													<thead> 
+														<tr> 
+															<th scope="col">Group E</th>  
+															<th scope="col">G</th>  
+															<th scope="col">W</th>
+															<th scope="col">D</th>  
+															<th scope="col">L</th>		
+															<th scope="col">P</th>  									
+														</tr> 
+													</thead> 
+													<tbody> 
+														<tr> 
+															<th><img src="media/flags-16/sui.png" alt="Switzerland"></img>&#32;<a href="#">SUI</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/ecu.png" alt="Ecuador"></img>&#32;<a href="#">ECU</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/fra.png" alt="France"></img>&#32;<a href="#">FRA</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/hon.png" alt="Honduras"></img>&#32;<a href="#">HON</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>		
+													</tbody> 
+												</table>
+											</li>
+											<li>
+												<table id="groupFTable" > 
+													<thead> 
+														<tr> 
+															<th scope="col">Group F</th>  
+															<th scope="col">G</th>  
+															<th scope="col">W</th>
+															<th scope="col">D</th>  
+															<th scope="col">L</th>		
+															<th scope="col">P</th>  									
+														</tr> 
+													</thead> 
+													<tbody> 
+														<tr> 
+															<th><img src="media/flags-16/arg.png" alt="Argentina"></img>&#32;<a href="#">ARG</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/bih.png" alt="Bosnia-Herzegovina"></img>&#32;<a href="#">BIH</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/irn.png" alt="Iran"></img>&#32;<a href="#">IRN</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/nga.png" alt="Nigeria"></img>&#32;<a href="#">NGA</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>		
+													</tbody> 
+												</table>
+											</li>
+											<li>
+												<table id="groupGTable" > 
+													<thead> 
+														<tr> 
+															<th scope="col">Group G</th>  
+															<th scope="col">G</th>  
+															<th scope="col">W</th>
+															<th scope="col">D</th>  
+															<th scope="col">L</th>		
+															<th scope="col">P</th>  									
+														</tr> 
+													</thead> 
+													<tbody> 
+														<tr> 
+															<th><img src="media/flags-16/ger.png" alt="Germany"></img>&#32;<a href="#">GER</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/por.png" alt="Portugal"></img>&#32;<a href="#">POR</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/gha.png" alt="Ghana"></img>&#32;<a href="#">GHA</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/usa.png" alt="United States"></img>&#32;<a href="#">USA</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>		
+													</tbody> 
+												</table>
+											</li>
+											<li>
+												<table id="groupHTable" > 
+													<thead> 
+														<tr> 
+															<th scope="col">Group H</th>  
+															<th scope="col">G</th>  
+															<th scope="col">W</th>
+															<th scope="col">D</th>  
+															<th scope="col">L</th>		
+															<th scope="col">P</th>  									
+														</tr> 
+													</thead> 
+													<tbody> 
+														<tr> 
+															<th><img src="media/flags-16/bel.png" alt="Belgium"></img>&#32;<a href="#">BEL</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/alg.png" alt="Algeria"></img>&#32;<a href="#">ALG</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/rus.png" alt="Russia"></img>&#32;<a href="#">RUS</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>
+														<tr> 
+															<th><img src="media/flags-16/kor.png" alt="Korea Republic"></img>&#32;<a href="#">KOR</a></th> 
+															<td>0</td>
+															<td>0</td>
+															<td>0</td> 
+															<td>0</td> 
+															<td>0</td> 
+														</tr>		
+													</tbody> 
+												</table>
+											</li>
+										</ul>
+									</div>
+
+									<div id="carouselPrev" class="jcarousel-control-prev"><a href="#"></a></div>
+									<div id="carouselNext" class="jcarousel-control-next"><a href="#"></a></div>
+								
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div data-role="collapsible">
+						<h1>INDIVIDUAL</h1>
+						<div data-role="collapsible-set" data-inset="false" id="performanceStats"  class="collapsible-content-sub">
+							<div data-role="collapsible" id="goals">
+								<h2>Goals and Assists</h2>
+								<table id="tableGoalsAssists" class="table-stats">
+									<thead>
+										<tr>											
+											<th scope="col"></th>
+											<th scope="col">G</th>
+											<th scope="col">GS</th>
+											<th scope="col">PK</th>
+											<th scope="col">A</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th><img src="media/flags-16/arg.png">&#32;L. Messi</img></th>											
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<th><img src="media/flags-16/por.png">&#32;C. Ronaldo</img></th>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div data-role="collapsible" id="cleansheets">
+								<h2>Clean Sheets</h2>
+								<table id="tableCleanSheets" class="table-stats">
+									<thead>
+										<tr>
+											<th></th>
+											<th>G</th>
+											<th>CS</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th><img src="media/flags-16/esp.png">&#32;I. Casillas</img></th>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<th><img src="media/flags-16/ger.png">&#32;M. Neuer</img></th>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div data-role="collapsible" id="discipline">
+								<h2>Discipline</h2>
+								<table id="tableDiscipline" class="table-stats">
+									<thead>
+										<tr>
+											<th></th>
+											<th>G</th>
+											<th><img src="media/card-yellow.png"></img></th>
+											<th><img src="media/card-red.png"></img></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th><img src="media/flags-16/esp.png">&#32;S. Busquets</img></th>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<th><img src="media/flags-16/chi.png">&#32;A. Vidal</img></th>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+									</tbody>
+								</table>		
+							</div>
+						</div>
+					</div>					
+				</div>				
+			</div>
+			<!-- /content -->
+		</div>
+		<!-- /STATS PAGE -->
+		
+		<!-- SETTINGS PAGE -->
+		<div id="settings-page" data-role="page" data-url="settings-page" class="app-bg">
+			<div data-role="header" data-theme="b" style="overflow:hidden;" class="navbar-icon-style wc-text">
+				<h1>2014 FIFA World Cup</h1>
+				<div data-role="navbar" class="navbar-icon-style">
+					<ul>
+						<li><a href="#live-page" id="live" data-icon="custom">LIVE</a></li>						
+						<li><a href="#teams-page" id="squads" data-icon="custom">TEAMS</a></li>						
+						<li><a href="#matches-page" id="matches" data-icon="custom">SCHEDULE</a></li>
+						<li><a href="#stats-page" id="stats" data-icon="custom">STATS</a></li>
+						<li><a href="#settings-page" id="settings" data-icon="custom" class="ui-btn-active">SETTINGS</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- /header -->
+			
+			<div data-role="content">
+				<label for="lang-select" class="select"> </label>
+				<select name="lang-select" id="lang-select" data-native-menu="false">
+					<option>Select Language:</option>
+					<option value="EN">English (EN)</option>
+					<option value="FR">French (FR)</option>
+					<option value="DE">German (DE)</option>
+					<option value="ES">Spanish (ES)</option>
+					<option value="IT">Italian (IT)</option>
+				</select>
+			</div>
+			<!-- /content -->
+		</div>
+		<!-- /SETTINGS PAGE -->
+		
+		<!-- VENUES PAGE -->
+		<!-- <div id="venues-page" data-role="page" data-url="venues-page" class="app-bg">
+			<div data-role="header" data-theme="b" style="overflow:hidden;" class="navbar-icon-style">
+				<h1>2014 World Cup</h1>
+				<div data-role="navbar" class="navbar-icon-style">
+					<ul>
+						<li><a href="#live-page" id="live" data-icon="custom" >LIVE</a></li>
+						<li><a href="#matches-page" id="matches" data-icon="custom">SCHEDULE</a></li>
+						<li><a href="#teams-page" id="squads" data-icon="custom">TEAMS</a></li>
+						<li><a href="#venues-page" id="venues" data-icon="custom" class="ui-btn-active">VENUES</a></li>
+						<li><a href="#" id="stats" data-icon="custom">STATS</a></li>
+					</ul>
+				</div>
+			</div>
+			/header 
+			
+			<div data-role="content">
+				<div id="stadia-container">					
+					<ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="e">
+						<li data-role="list-divider">Rio de Janeiro</li>
+						<li data-icon="false">
+							<img src="media/stadia/rio-de-janeiro.jpg">
+							<p class="stadium-details">Est&#225;dio do Maracan&#227;</p>
+							<p class="stadium-details"><em>Capacity: <strong>76,935</strong></em></p>
+						</li>
+						
+						<li data-role="list-divider">Bras&#237;lia</li>
+						<li data-icon="false">
+							<img src="media/stadia/brasilia.jpg">
+							<p class="stadium-details">Est&#225;dio Nacional Man&#233; Garrincha</p>
+							<p class="stadium-details"><em>Capacity: <strong>70,042</strong></em></p>
+						</li>
+						
+						<li data-role="list-divider">S&#227;o Paulo</li>
+						<li data-icon="false">
+							<img src="media/stadia/sao-paulo.jpg">
+							<p class="stadium-details">Arena Corinthians</p>
+							<p class="stadium-details"><em>Capacity: <strong>68,000</strong></em></p>
+						</li>
+						
+						<li data-role="list-divider">Fortaleza</li>
+						<li data-icon="false">
+							<img src="media/stadia/fortaleza.jpg">
+							<p class="stadium-details">Est&#225;dio Castel&#227;o</p>
+							<p class="stadium-details"><em>Capacity: <strong>64,846</strong></em></p>
+						</li>
+						
+						<li data-role="list-divider">Belo Horizonte</li>
+						<li data-icon="false">
+							<img src="media/stadia/belo-horizonte.jpg">
+							<p class="stadium-details">Est&#225;dio Mineir&#227;o</p>
+							<p class="stadium-details"><em>Capacity: <strong>62,547</strong></em></p>
+						</li>
+						
+						<li data-role="list-divider">Salvador</li>
+						<li data-icon="false">
+							<img src="media/stadia/salvador.jpg">
+							<p class="stadium-details">Arena Fonte Nova</p>
+							<p class="stadium-details"><em>Capacity: <strong>56,000</strong></em></p>
+						</li>
+						
+						<li data-role="list-divider">Porto Alegre</li>
+						<li data-icon="false">
+							<img src="media/stadia/porto-alegre.jpg">
+							<p class="stadium-details">Est&#225;dio Beira-Rio</p>
+							<p class="stadium-details"><em>Capacity: <strong>51,300</strong></em></p>
+						</li>
+						
+						<li data-role="list-divider">Recife</li>
+						<li data-icon="false">
+							<img src="media/stadia/recife.jpg">
+							<p class="stadium-details">Arena Pernambuco</p>
+							<p class="stadium-details"><em>Capacity: <strong>46,154</strong></em></p>
+						</li>
+						
+						<li data-role="list-divider">Cuiab&#225;</li>
+						<li data-icon="false">
+							<img src="media/stadia/cuiaba.jpg">
+							<p class="stadium-details">Arena Pantanal</p>
+							<p class="stadium-details"><em>Capacity: <strong>42,968</strong></em></p>
+						</li>
+						
+						<li data-role="list-divider">Manaus</li>
+						<li data-icon="false">
+							<img src="media/stadia/manaus.jpg">
+							<p class="stadium-details">Arena Amaz&#244;nia</p>
+							<p class="stadium-details"><em>Capacity: <strong>42,374</strong></em></p>
+						</li>	
+						
+						<li data-role="list-divider">Natal</li>						
+						<li data-icon="false">
+							<img src="media/stadia/natal.jpg">
+							<p class="stadium-details">Arena das Dunas</p>
+							<p class="stadium-details"><em>Capacity: <strong>42,086</strong></em></p>
+						</li>
+						
+						<li data-role="list-divider">Curitiba</li>
+						<li data-icon="false">
+							<img src="media/stadia/curitiba.jpg">
+							<p class="stadium-details">Arena da Baixada</p>
+							<p class="stadium-details"><em>Capacity: <strong>43,981</strong></em></p>
+						</li>
+					</ul>	
+				</div>
+			</div>
+			 /content 	
+			
+		</div> -->
+		<!-- /VENUES PAGE -->
+		
+	</body>
+</html>

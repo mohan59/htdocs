@@ -1,0 +1,12 @@
+{
+	"en":{
+		"appName": "2014 FIFA World Cup",
+		"menuButtons": {
+			"liveText": "LIVE",
+			"gamesText": "GAMES",
+			"teamsText": "TEAMS",
+			"statsText": "STATS",
+			"settingsText": "SETTINGS"
+		}
+	}
+}

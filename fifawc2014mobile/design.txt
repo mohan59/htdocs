@@ -1,0 +1,52 @@
+HOME
+	- live match(es)
+	- snippet of stats
+FIXTURES
+	- group ties
+	- knockout phase
+SQUADS
+	- teams with photos
+VENUES
+	- stadia photos with info
+STATS
+	- most goals (ind/team)
+	- most assists (ind/team)
+	- most clean sheets 
+	- awards (golden ball etc)
+
+	
+Bright Chartreuse - #b4cd3e
+Olympian Blue - #0069aa									GROUP A					GROUP B					GROUP C					GROUP D
+Rhapsody - #a288ad										-------					-------					-------					-------
+Rose Smoke - #e6c9bb									BRAZIL					SPAIN					COLOMBIA				URUGUAY
+Honey Gold - #dfaf4b									CROATIA					NETHERLANDS				GREECE					COSTA RICA
+Pink Flambe - #d54e88									MEXICO					CHILE					COTE D'IVOIRE			ENGLAND
+Tangerine Tango - #ed542b								CAMEROON				AUSTRALIA				JAPAN					ITALY
+Ultramarine Green - #018b72
+														GROUP E					GROUP F					GROUP G					GROUP H
+														-------					-------					-------					-------
+Group A - #dedbff										SWITZERLAND				ARGENTINA				GERMANY					BELGIUM
+Group B - #ffc6c7										ECUADOR					BOSNIA-HERZEGOVINA		PORTUGAL				ALGERIA
+Group C - #fffbd5										FRANCE					IRAN					GHANA					RUSSIA
+Group D - #e8e9ea										HONDURAS				NIGERIA					USA						KOREA REPUBLIC
+Group E - #caffe9
+Group F - #bfeeff
+Group G - #ffed86
+Group H - #8fefff
+
+VENUES WITH UNICODES
+--------------------
+City					Stadium
+----					-------
+Rio de Janeiro			Est&#225;dio do Maracan&#227;
+Bras&#237;lia			Est&#225;dio Nacional Man&#233; Garrincha
+S&#227;o Paulo			Arena Corinthians
+Fortaleza				Est&#225;dio Castel&#227;o
+Belo Horizonte			Est&#225;dio Mineir&#227;o
+Salvador				Arena Fonte Nova
+Porto Alegre			Est&#225;dio Beira-Rio
+Recife					Arena Pernambuco
+Cuiab&#225;				Arena Pantanal
+Manaus					Arena Amaz&#244;nia
+Natal					Arena das Dunas
+Curitiba				Arena da Baixada

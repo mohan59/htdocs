@@ -1,0 +1,120 @@
+/* Styles */
+
+body, h1, h2, h3, h4, h5, h6, div, span, ul, li { font-family: Calibri, sans-serif; }
+
+@font-face
+{
+font-family: countdownFont;
+src: url(../fonts/digital-7I.ttf);
+}
+
+/* navbar icon style */
+.navbar-icon-style .ui-btn .ui-btn-inner { padding-top: 40px !important; font-size: 0.9em !important;  }
+.navbar-icon-style .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+#live .ui-icon { background:  url(../media/live.png) 50% 50% no-repeat; background-size: 32px 32px; }
+/* #live .ui-icon { background-image: url(../media/artwork.png); backgrou  nd-position: -10px -10px; display: inline; background-size: 32px 32px; width: 32px; height: 32px; } */
+#matches .ui-icon { background:  url(../media/matches.png) 50% 50% no-repeat; background-size: 32px 32px;  }
+#squads .ui-icon { background:  url(../media/squads.png) 50% 50% no-repeat;  background-size: 32px 32px; }
+#venues .ui-icon { background:  url(../media/venues.png) 50% 50% no-repeat;  background-size: 32px 32px; }
+#stats .ui-icon { background:  url(../media/stats.png) 50% 50% no-repeat;  background-size: 32px 32px; }
+#settings .ui-icon { background:  url(../media/settings.png) 50% 50% no-repeat;  background-size: 32px 32px; }
+
+.app-bg { background-color: #440000 !important; font-size: 0.9em; margin: 0 0; } 
+
+.goal-count { font-size: 1.2em; font-weight: bold;}
+
+.countdown-display { display: block; background-image: url(../media/artwork.png); background-position:  -10px -165px; background-repeat: repeat-x; background-size: 2px 60px; border: 1px solid #FF0000; background-color: #787878; -webkit-border-radius: 10px !important; border-radius: 10px !important; color: #FFF; margin: auto; padding: 10px; text-align: center; width: 18px; height: 18px; float:left;}
+
+.collapsible-content { margin: auto; }
+.collapsible-content span { font-size: 0.9em; }
+
+.match-update-container { border: 1px solid #ff0000; background: -webkit-linear-gradient(rgba(140, 140, 140, 0.25), rgba(140, 140, 140, 1)); background: -o-linear-gradient(rgba(140, 140, 140, 0.25), rgba(140, 140, 140, 1)); background: -moz-linear-gradient(rgba(140, 140, 140, 0.25), rgba(140, 140, 140, 1)); background: -linear-gradient(rgba(140, 140, 140, 0.25), rgba(140, 140, 140, 1)); color: #fff; margin: -15px -15px 20px; }
+.table-match-update { width: 100%; font-size: 1.6em; text-shadow: none; font-smooth: always; -webkit-font-smoothing: antialiasing; padding: 10px; height: auto; text-align: center; }
+.table-match-update tr th:first-child { float: left; padding-right: 10px; }
+.table-match-update tr th:last-child{ float: right; padding-left: 10px; }
+.table-match-update tr th a:hover { }
+
+
+.live-score-container { border: 1px solid #aaa; width: 90%; height: 70%; -webkit-border-radius: 10px !important; border-radius: 10px !important; margin: auto; padding: 10px; background-color: #5695c7; }
+.live-score-match-type { color: #FFF; font-weight: bold; text-shadow: none; font-size: 0.9em; margin-top: 0; text-align: center; }
+.live-score-match-number { color: #e7f4ff; text-shadow: none; font-size: 0.75em; margin-top: 0; float: left; text-align: left; }
+.live-score-date-venue { color: #e7f4ff; text-shadow: none; font-size: 0.75em; margin-top: 0; float: right; text-align: right; }
+
+.table-live-score { border: 1px solid #aaa; width: 100%; color: #555; font-size: 0.9em; text-shadow: none; text-align: center; font-smooth: always; -webkit-font-smoothing: antialiasing; background-color: #f1f8fc; }
+.table-live-score tr th a { text-decoration: none; }
+.table-live-score tr th a:hover { text-decoration: underline; }
+.live-score-goal { padding-top: 2px; font-size: 1.5em; }
+.live-score-minute { padding-top: 2px; font-size: 1.3em; color: #222; text-align: center; }
+
+.table-countdown { border: 1px solid #aaa; text-shadow: none; font-smooth: always; -webkit-font-smoothing: antialiasing; color: #222; margin: auto; }
+.table-countdown tr th, .table-countdown tr td { }
+.table-countdown tr th p { background: url(../media/countdown-digit.png) 50% 50% no-repeat; width: 45px; height: 40px; font-family: countdownFont; font-size: 1.6em; color: #fff; margin: auto; padding-top: 20px; }
+
+.team-list ul li a { font-size: 0.8em; }
+.team-list ul li img { border: 1px solid #ccc; }
+
+.table-games { width: 100%; font-size: 0.75em; border-collapse: collapse; margin: auto; text-shadow: none; font-smooth: always; -webkit-font-smoothing: antialiasing; }
+.table-games tr th { text-align: left; padding: 5px 3px; } 
+.table-games tr td { padding: 5px 3px; text-align: left; }
+.table-games tr th:first-child, .table-games tr td:first-child { text-align: left; padding: 5px 3px; }
+.table-games tr th:last-child  { text-align: right; padding: 5px 3px; } 
+.table-games td ~ td { text-align: right; padding: 5px 3px; }
+.table-games tr td a { text-decoration: none; }
+.table-games tr td a:hover { text-decoration: underline; }
+.table-games tr:nth-child(odd) { background-color: #fff; }
+.table-games tr:nth-child(even) { background-color: #ddf0ff; }
+
+.collapsible-content { margin-top: -22px; }
+.collapsible-content-sub { margin: -10px auto; }
+.collapsible-content span, .collapsible-content-sub span { text-shadow: none; }
+
+.table-stats { width: 100%; font-size: 0.8em; border-collapse: collapse; margin: 0; font-smooth: always; -webkit-font-smoothing: antialiasing; text-shadow: none; border: 1px solid #ababab;  }
+.table-stats thead th { background-color: #4074a5; color: #fff; }
+.table-stats tr:last-child { padding-bottom: -20px; }
+.table-stats th, .table-stats td { text-align: right; padding: 6px 5px 5px; }
+.table-stats th:first-child, .table-stats td:first-child { text-align: left; padding: 6px 5px 5px; }
+.table-stats th a, .table-stats td a { text-decoration: none; }
+.table-stats th a:hover, .table-stats td a:hover { text-decoration: underline; } 
+.table-stats tr:nth-child(even) { background-color: #ddf0ff; }
+
+
+/* .group-A { background-color: #b4cd3e; }
+.group-B { background-color: #0069aa; }
+.group-C { background-color: #a288ad; }
+.group-D { background-color: #e6c9bb; }
+.group-E { background-color: #dfaf4b; }
+.group-F { background-color: #d54e88; }
+.group-G { background-color: #ed542b; }
+.group-H { background-color: #018b72; } */
+
+.group-A { background-color: #dedbff; }
+.group-B { background-color: #87d1ff; }
+.group-C { background-color: #a288ad; }
+.group-D { background-color: #e6c9bb; }
+.group-E { background-color: #dfaf4b; }
+.group-F { background-color: #d54e88; }
+.group-G { background-color: #ed542b; }
+.group-H { background-color: #018b72; }
+
+
+
+/** Carousel **/
+.jcarousel-wrapper { margin: 10px auto; position: relative; margin-bottom: 15px; }
+.jcarousel { position: relative; overflow: hidden; margin: auto; width: 300px; }
+.jcarousel ul { width: 20000em; position: relative; list-style: none; margin: 0; padding: 0; }
+.jcarousel li { float: left; width: 300px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.jcarousel table { width: 100%; font-size: 0.8em; border-collapse: collapse; margin: auto; font-smooth: always; -webkit-font-smoothing: antialiasing; text-shadow: none; height: auto !important; border: 1px solid #ababab;   }
+.jcarousel thead th { background-color: #4074a5; color: #fff; }
+.jcarousel th, .jcarousel td { text-align: right; padding: 6px 5px 5px; }
+.jcarousel th:first-child, .jcarousel td:first-child { text-align: left; padding: 6px 5px 5px; }
+.jcarousel th a, .jcarousel td a { text-decoration: none; }
+.jcarousel th a:hover, .jcarousel td a:hover { text-decoration: underline; } 
+.jcarousel tr:nth-child(odd) {  }
+.jcarousel tr:nth-child(even) { background-color: #ddf0ff; }
+
+/** Carousel Controls **/
+.jcarousel-control-prev, .jcarousel-control-next { width: 32px; height: 32px; position: absolute; cursor: pointer; z-index: 100; }
+.jcarousel-control-prev { left: 40%; background: url(../media/carousel_left.png) no-repeat; }
+.jcarousel-control-next { right: 40%; background: url(../media/carousel_right.png) no-repeat; }
+.jcarousel-disabled-control { cursor: default; opacity: 0.3; filter: alpha(opacity:0.3); }
