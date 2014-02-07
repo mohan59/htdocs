@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" ng-app="flightSearchApp">
+<head>
+  <meta charset="utf-8">
+  <title>Search for flights between London Heathrow and Los Angeles International</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/jquery/jquery-1.10.2.min.js"></script>
+  <script src="js/flightSearchController.js"></script>
+</head>
+<body ng-controller="FlightsListCtrl">
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span2 well">
+        <!--Sidebar content-->		
+		<h3 class="padding-Bot10">Filter results</h3>
+		<ul class="nav nav-list" ng-repeat="filter in filters" >
+			<li class="nav-header filter-header">{{filter.name}}</li>
+			<li ng-repeat="option in filter.options"><input type="checkbox" ng-checked="option.value" ng-model="option.value"> {{option.optionName}}</input></li>
+			<hr />
+		</ul>
+		
+		<!--<div class="nav-header">Departure</div>
+		 <p class="slider-label">12:00a</p><input type="range" min="0" max="12" name="dep-slider" step="1" class="span10" /><p class="slider-label">11:00p</p>
+		<select class="span10" >
+			<option value="first" >12:00a - 3:00a</option>
+			<option value="second" >3:00a - 6:00a</option>
+			<option value="third" >6:00a - 9:00a</option>
+			<option value="fourth" >9:00a - 12:00p</option>
+			<option value="fifth" >12:00p - 3:00p</option>
+			<option value="sixth" >3:00p - 6:00p</option>
+			<option value="seventh" >6:00p - 9:00p</option>
+			<option value="eighth" >9:00p - 12:00a</option>
+		</select> -->
+		
+      </div>
+      <div class="span10">
+        <!--Body content-->
+
+		<p id="search-summary-text" class="summary" />
+		
+		<p>Sort by: </p>
+		<select ng-model="orderProp" class="span2">
+			<option ng-repeat="sort in sorters" ng-selected="sort.value" ng-value="sort.id" ng-model="sort.id">{{sort.name}}</option>
+		</select>
+		<br />		
+		<ul class="flights mainText">
+		  <li ng-repeat="flight in flights | searchFilter:filters | orderBy:orderProp"  >            
+			<span><p><img src=img/{{flight.operatorCode}}.gif alt={{flight.operator}} width='123' height='25' /></p><p class='price-text'> ${{flight.price.split(".")[0]}}.<sup>{{flight.price.split(".")[1]}}</sup></p></span>
+			<p><b>Dep:</b> {{flight.depDateTime.split("~")[0]}} {{flight.depDateTime.split("~")[1]}} <b>Arr:</b> {{flight.arrDateTime.split("~")[0]}} {{flight.arrDateTime.split("~")[1]}}</p>
+			<p><b>Duration: </b>{{flight.totalFlightTime}}</p>			
+			<p><a href="javascript:void(0);" id="detLink{{flight.id}}" class="detailsLink" ng-click="showDetails(flight)" ng-name="some random list item">View Details</a></p>
+			<div id="detTxt{{flight.id}}" class="detailsText hide">
+				<div id="layover{{flight.id}}" >
+					<p><b>From: </b>{{flight.depAirport}} <b>To: </b>{{flight.layoverAirport}}</p>										
+					<div id="flight{{flight.id}}1" >
+						<p><b>Flight: </b>{{flight.flightNumber.split("~")[0]}}; {{flight.aircraftType.split("~")[0]}}</p>
+						<p><b>Dep: </b>{{flight.depDateTime.split("~")[0]}} {{flight.depDateTime.split("~")[1]}} <b>Arr:</b> {{flight.layoverArrDateTime.split("~")[0]}} {{flight.layoverArrDateTime.split("~")[1]}}</p>
+					</div>
+					<hr />					
+					<p><b>Layover: </b>{{flight.layoverAirport}}; {{flight.layoverTime}}</p>					
+					<hr />
+					<p><b>From: </b>{{flight.layoverAirport}} <b>To: </b>{{flight.arrAirport}}</p>							
+					<div id="flight{{flight.id}}2" >
+						<p><b>Flight: </b>{{flight.flightNumber.split("~")[1]}}; {{flight.aircraftType.split("~")[1]}}</p>
+						<p><b>Dep: </b>{{flight.layoverDepDateTime.split("~")[0]}} {{flight.layoverDepDateTime.split("~")[1]}} <b>Arr:</b> {{flight.arrDateTime.split("~")[0]}} {{flight.arrDateTime.split("~")[1]}}</p>
+					</div>
+				</div>
+				
+				<div id="direct{{flight.id}}" class="hide">
+					<p><b>From: </b>{{flight.depAirport}} <b>To: </b>{{flight.arrAirport}}</p>
+					<div>
+						<p><b>Flight: </b>{{flight.flightNumber}}; {{flight.aircraftType}}</p>
+						<p><b>Dep: </b>{{flight.depDateTime.split("~")[0]}} {{flight.depDateTime.split("~")[1]}} <b>Arr:</b> {{flight.arrDateTime.split("~")[0]}} {{flight.arrDateTime.split("~")[1]}}</p>
+					</div>
+				</div>
+			</div>		
+			<p class="specialText">{{flight.additionalInfo}}</p>
+		  </li>
+		  <br />
+		</ul>
+		
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

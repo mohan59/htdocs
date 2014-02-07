@@ -1,0 +1,78 @@
+[
+	{
+		"filters":[
+			{
+				"name": "operators",
+				"options": [
+					{					
+						"optionName": "American",
+						"optionId": "AA", 
+						"value": true
+					}, 
+					{
+						"optionName": "United",
+						"optionId": "UA", 					
+						"value": true
+					},
+					{
+						"optionName": "Delta",
+						"optionId": "DL", 					
+						"value": true
+					},
+					{
+						"optionName": "Virgin",
+						"optionId": "VS", 					
+						"value": true
+					},
+					{
+						"optionName": "British Airways",
+						"optionId": "BA", 					
+						"value": true
+					}
+				]
+			},
+			{
+				"name": "countries",
+				"options": [
+					{
+						"optionName": "US",
+						"optionId": "US",	
+						"value": true
+					}, 
+					{
+						"optionName": "UK", 
+						"optionId": "UK",
+						"value": true
+					}
+				]
+			},
+			{
+				"name": "stops",
+				"options": [
+					{
+						"optionName": "Non-stop", 
+						"optionId": "0",
+						"value": true
+					}, 
+					{
+						"optionName": "1-stop", 
+						"optionId": "1",
+						"value": true
+					}
+				]
+			}
+		],
+		"sorters": [
+			{
+				"name": "Price",
+				"id": "price",
+				"value": true
+			},
+			{
+				"name": "Time",
+				"id": "totalFlightTime",
+				"value": false
+			}
+		]
+	}
+]
